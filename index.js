@@ -10,7 +10,6 @@ let searchObject="";
 
 
 $(document).ready(function(){
-    // alert("i am alive");
     
     //add event handler to runSearch button
     $("#runSearch").on("click",searchArticles);
@@ -67,14 +66,13 @@ function buildURL(){
         returnUrl=`${queryURLBase}${searchTerm}&api-key=${apikey}`;
         return returnUrl;
 
-        
     }
     //user provides end year only
     if( startYear === "" && endYear !== "")
     {
         returnUrl=`${queryURLBase}${searchTerm}&facet=true&end_date=${endYear}&api-key=${apikey}`;
         return returnUrl;
-        
+         
     }
     //user provide start year only
     if( startYear !== "" && endYear === "")
